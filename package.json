@@ -4,7 +4,7 @@
     "description": "A small component for displaying information based on user scroll and cursor position.",
     "author": "Chandler Chappell @chvndler <chvndler.ch@icloud.com>",
     "packageManager": "yarn@3.2.2",
-    "private": false,
+    "private": true,
     "repository": {
         "type": "git",
         "url": "git+https://github.com/chvndler/arie.js.git"
