@@ -1,6 +1,7 @@
 {
     "name": "traxx.www",
     "version": "1.0.0",
+    "private": true,
     "description": "Traxx website",
     "scripts": {
         "dev": "next dev",
