@@ -67,7 +67,7 @@
         "semi": false,
         "singleQuote": true,
         "arrowParens": "always",
-        "tabWidth": 1,
+        "tabWidth": 2,
         "useTabs": false,
         "printWidth": 100,
         "trailingComma": "es5",
