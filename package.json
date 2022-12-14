@@ -1,6 +1,6 @@
 {
-    "name": "arie",
-    "version": "0.0.5-beta.2",
+    "name": "arie-js",
+    "version": "0.0.4-beta.1",
     "description": "A small component for displaying information based on user scroll and cursor position.",
     "author": "Chandler Chappell @chvndler <chvndler.ch@icloud.com>",
     "packageManager": "yarn@3.2.2",
@@ -66,7 +66,7 @@
         "semi": false,
         "singleQuote": true,
         "arrowParens": "always",
-        "tabWidth": 2,
+        "tabWidth": 1,
         "useTabs": false,
         "printWidth": 100,
         "trailingComma": "es5",

@@ -1,60 +1,60 @@
 export type Cursor = {
+ /*
+  * Mouse position
+  */
+ position: {
   /*
-   * Mouse position
+   * Client position - browser rendered content
    */
-  position: {
-    /*
-     * Client position - browser rendered content
-     */
-    client: {x: number | null; y: number | null}
-    /*
-     * Screen position - monitor
-     */
-    screen: {x: number | null; y: number | null}
-    /*
-     * Page position - viewport
-     */
-    page: {x: number | null; y: number | null}
-  }
+  client: {x: number | null; y: number | null}
   /*
-   * Mouse buttons
+   * Screen position - monitor
    */
-  scroll: {
-    wheelDown: boolean | null
-    wheelUp: boolean | null
-  }
-  eventType: string | null
-  selectedElement: SelectedElement
+  screen: {x: number | null; y: number | null}
+  /*
+   * Page position - viewport
+   */
+  page: {x: number | null; y: number | null}
+ }
+ /*
+  * Mouse buttons
+  */
+ scroll: {
+  wheelDown: boolean | null
+  wheelUp: boolean | null
+ }
+ eventType: string | null
+ selectedElement: SelectedElement
 }
 
 type SelectedElement = {
+ /*
+  * Mouse relative position to selected element
+  */
+ position: {
   /*
-   * Mouse relative position to selected element
+   * Angle between cursor and element : in degrees
    */
-  position: {
-    /*
-     * Angle between cursor and element : in degrees
-     */
-    angle: number | null
-    /*
-     * Distance between cursor and element
-     */
-    x: number | null
-    y: number | null
-  }
+  angle: number | null
   /*
-   * Bounding rectangle of selected element
+   * Distance between cursor and element
    */
-  boundingRect: {
-    left: number | null
-    top: number | null
-    width: number | null
-    height: number | null
-  }
-  /*
-   * Cursor over selected element
-   */
-  isHover: boolean
+  x: number | null
+  y: number | null
+ }
+ /*
+  * Bounding rectangle of selected element
+  */
+ boundingRect: {
+  left: number | null
+  top: number | null
+  width: number | null
+  height: number | null
+ }
+ /*
+  * Cursor over selected element
+  */
+ isHover: boolean
 }
 
 export type EventType = 'mousemove' | 'mousedown' | 'mouseup' | 'touchmove' | 'touchstart' | 'wheel'
