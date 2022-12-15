@@ -7,7 +7,6 @@ import {Box} from './Box'
 export const DefaultArie = () => {
   const {
     position: {client},
-    scroll: {wheelDown, wheelUp},
   } = useArie()
   return (
     <>

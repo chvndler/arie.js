@@ -13,11 +13,11 @@
         "www"
     ],
     "license": "MIT",
-    "main": "dist/index.js",
-    "module": "dist/arie.esm.js",
+    "main": "./dist/index.js",
+    "module": "./dist/arie.esm.js",
     "exports": "./dist/arie.esm.js",
-    "typings": "dist/index.d.ts",
-    "types": "dist/index.d.ts",
+    "typings": "./dist/index.d.ts",
+    "types": "./dist/index.d.ts",
     "engines": {
         "node": ">=12.4"
     },
