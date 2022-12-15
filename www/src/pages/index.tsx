@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import {ArieLogo} from '../assets/ArieLogo'
 import {Space} from '../components/Space'
-import {useArie} from '../../../dist'
+import {useArie} from 'arie-js'
 
 const Index = () => {
   const cursor = useArie()
