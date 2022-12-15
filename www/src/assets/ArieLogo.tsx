@@ -7,8 +7,8 @@ export const ArieLogo = ({width, ...props}: LxgoProps) => {
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 80 24"
-        width="80"
-        height="24"
+        width="150"
+        height="60"
         {...props}>
 	<path d="M1.4,22.4L9.5,1.6h4.7l8,20.7H18L11.5,5.5H12L5.6,22.4H1.4z M5.6,17.5l1.1-3.5h11.2l0.1,3.5H5.6z"/>
 	<path d="M24.2,22.4V1.6h9.6c1.2,0,2.2,0.2,3.2,0.7c1,0.5,1.7,1.2,2.3,2c0.6,0.9,0.8,1.8,0.8,2.9c0,1.3-0.3,2.4-0.9,3.3

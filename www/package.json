@@ -9,6 +9,7 @@
         "start": "next start"
     },
     "dependencies": {
+        "@stitches/react": "^1.2.8",
         "arie-js": "0.0.4-beta.3",
         "next": "13.0.6",
         "react": "17.0.2",
