@@ -44,3 +44,26 @@ export const ArieContainer = styledContainer
 /* ---------------------------------- */
 
 export const Arie = ArieDefault
+
+/**
+ * 
+ * 
+ * 
+ function pad(str, max) {
+	str = str.toString();
+	return str.length < max ? pad("0" + str, max) : str;
+}
+
+function digits(myVal, myNumDigits, myPad) {
+	var s = myVal.toString();
+	while (s.length < myNumDigits) s = '0' + s;	
+	return pad(Math.floor(s), myPad);
+}
+
+hr = digits(time / 3600, 1, 1);
+min = digits(time % 3600 / 60, 2, 2);
+sec = digits(time % 60, 2, 2);
+
+"SLP " + hr + ":" + min + ":" + sec;
+*
+ */
