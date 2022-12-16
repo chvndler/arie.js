@@ -10,6 +10,7 @@ import {Box} from '../components/Box'
 import {TrackArie} from '../components/TrackArie'
 import {AngleArie} from '../components/Angle'
 import {Flex} from '../components/Flex'
+import {CopyToClipboard} from '../components/Copy'
 
 const Index = () => {
   return (
@@ -42,6 +43,10 @@ const Index = () => {
             <DefaultArie />
           </Container>
         </Canvas>
+
+        <Container>
+          <CopyToClipboard />
+        </Container>
       </main>
     </>
   )

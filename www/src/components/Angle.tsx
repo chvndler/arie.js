@@ -16,7 +16,7 @@ export const AngleArie = () => {
       <Box
         css={{
           border: '1px solid lightgray',
-          borderRadius: 50,
+          borderRadius: 8,
           paddingLeft: 12,
           paddingRight: 10,
           paddingTop: 5,
