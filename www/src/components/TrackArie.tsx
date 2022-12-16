@@ -1,7 +1,7 @@
 import React from 'react'
 
-// import {useArie} from '../../../dist'
-import {useArie} from 'arie-js'
+import {useArie} from '../../../dist'
+// import {useArie} from 'arie-js'
 import {Box} from './Box'
 
 export const TrackArie = () => {
