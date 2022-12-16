@@ -1,6 +1,7 @@
 import React from 'react'
 import {styled} from '@stitches/react'
-import {useArie} from '../../../dist'
+// import {useArie} from '../../../dist'
+import {useArie} from 'arie-js'
 import {Flex} from './Flex'
 import {Box} from './Box'
 
