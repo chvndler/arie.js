@@ -2,7 +2,7 @@
     "name": "arie.www",
     "version": "1.0.0",
     "private": true,
-    "description": "Traxx website",
+    "description": "ArieSite",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "@stitches/react": "^1.2.8",
-        "arie-js": "^0.0.4-beta.4",
+        "arie-js": "0.0.4-beta.5",
         "next": "13.0.6",
         "react": "17.0.2",
         "react-dom": "17.0.2"

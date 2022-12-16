@@ -1,21 +1,36 @@
 import React from 'react'
 
-import {useArie} from 'arie-js'
+// import {useArie} from '../../../dist'
+import {useArie} from '../../../dist'
+import {Box} from './Box'
 
-export const Angle = () => {
- const {
-  selectedElement: {
-   position: {angle},
-  },
- } = useArie(true, 'trackElement')
- return (
-  <div className="mouse-angle">
-   <div className="title">Circle around 🧀</div>
-   <div className="angle">
-    <div className="header">Mouse Angle</div>
-    <div className="row">{angle ? <div>{angle.toFixed(0)}°</div> : <div>0°</div>}</div>
-   </div>
-   <div id="trackElement">🧀</div>
-  </div>
- )
+export const AngleArie = () => {
+  const {
+    selectedElement: {
+      position: {angle},
+    },
+  } = useArie(true, 'trackElement')
+  return (
+    <>
+      {/* <div className="row">{angle ? <div>{angle.toFixed(0)}°</div> : <div>0°</div>}</div> */}
+      <Box
+        css={{
+          border: '1px solid lightgray',
+          borderRadius: 50,
+          paddingLeft: 12,
+          paddingRight: 10,
+          paddingTop: 5,
+          paddingBottom: 5,
+          width: '60px',
+          display: 'flex',
+          alignItems: 'center',
+          margin: 'auto',
+          justifyContent: 'center',
+        }}
+      >
+        <Box css={{}}>{angle ? <div>{angle.toFixed(0)}°</div> : <div>0°</div>}</Box>
+        <Box id={'trackElement'} />
+      </Box>
+    </>
+  )
 }

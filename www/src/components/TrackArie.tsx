@@ -1,32 +1,51 @@
 import React from 'react'
 
-import {useArie} from 'arie-js'
+import {useArie} from '../../../dist'
+import {Box} from './Box'
+import {Space} from './Space'
 
-export const EyesFollow = () => {
- const {
-  selectedElement: {
-   position: {angle: angleLeftEye},
-  },
- } = useArie(true, 'left-eye', {x: 20, y: 20})
- const {
-  selectedElement: {
-   position: {angle: angleRightEye},
-  },
- } = useArie(true, 'right-eye', {x: 20, y: 20})
+export const TrackArie = () => {
+  const {
+    selectedElement: {
+      position: {angle: angleRightEye},
+    },
+  } = useArie(true, 'right-eye', {x: 0, y: 0})
 
- const rotateLeftEye = `rotate(${-angleLeftEye}deg)`
- const rotateRightEye = `rotate(${-angleRightEye}deg)`
+  const rotateRightEye = `rotate(${-angleRightEye}deg)`
 
- return (
-  <div className="eyes-follow">
-   <div className="eyes">
-    <div id="left-eye" className="eye" style={{transform: rotateLeftEye}}>
-     <div className="pupil" />
-    </div>
-    <div id="right-eye" className="eye" style={{transform: rotateRightEye}}>
-     <div className="pupil" />
-    </div>
-   </div>
-  </div>
- )
+  return (
+    <>
+      <Box
+        css={{
+          display: 'flex',
+          alignItems: 'flex-end',
+          margin: 'auto',
+          justifyContent: 'flex-end',
+        }}
+      >
+        <Box
+          id="right-eye"
+          className="eye"
+          css={{
+            //ctransform: rotateRightEye,
+            padding: 12,
+            borderRadius: 50,
+            // sborder: '1px solid lightgray',
+          }}
+        >
+          <Box
+            className={'pupil'}
+            css={{
+              transform: rotateRightEye,
+              height: 2,
+              width: 14,
+              backgroundColor: 'white',
+              borderRadius: 4,
+              boxShadow: '0 0 6px 1px #BFC1C8',
+            }}
+          />
+        </Box>
+      </Box>
+    </>
+  )
 }

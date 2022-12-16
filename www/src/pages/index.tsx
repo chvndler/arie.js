@@ -7,6 +7,9 @@ import {Space} from '../components/Space'
 import {Canvas} from '../components/Canvas'
 import {DefaultArie} from '../components/DefaultArie'
 import {Box} from '../components/Box'
+import {TrackArie} from '../components/TrackArie'
+import {AngleArie} from '../components/Angle'
+import {Flex} from '../components/Flex'
 
 const Index = () => {
   return (
@@ -18,12 +21,24 @@ const Index = () => {
         <Canvas>
           <Container>
             <VersionBadge />
-            <Space size={'1'} />
             <Box css={{marginLeft: 10}}>
               <ArieLogo />
             </Box>
-            <Space size={'1'} />
 
+            <Flex
+              css={{
+                marginTop: 6,
+                marginBottom: 6,
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: '10px',
+                width: '190px',
+              }}
+            >
+              <AngleArie />
+              <TrackArie />
+              <AngleArie />
+            </Flex>
             <DefaultArie />
           </Container>
         </Canvas>

@@ -1,6 +1,6 @@
 import React from 'react'
 import {styled} from '@stitches/react'
-import {useArie} from 'arie-js'
+import {useArie} from '../../../dist'
 import {Flex} from './Flex'
 import {Box} from './Box'
 
@@ -12,8 +12,8 @@ export const DefaultArie = () => {
     <>
       <Flex>
         <StyledBadge>
-          <Box css={{marginRight: 10}}>{client.x && client.x.toFixed(3)}</Box>
-          <Box css={{marginLeft: 10}}>{client.y && client.y.toFixed(3)}</Box>
+          <Box css={{marginRight: 10}}>X.{client.x && client.x.toExponential(2)}</Box>
+          <Box css={{marginLeft: 10}}>Y.{client.y && client.y.toPrecision(6)}</Box>
         </StyledBadge>
       </Flex>
     </>
@@ -23,12 +23,12 @@ export const DefaultArie = () => {
 const styledBadge = styled('div', {
   boxSizing: 'border-box',
   display: 'flex',
-  paddingLeft: 20,
-  paddingRight: 20,
+  paddingLeft: 12,
+  paddingRight: 12,
   paddingTop: 5,
   paddingBottom: 5,
   margin: 'auto',
-  border: '2px solid black ',
+  border: '1px solid lightgray',
   borderRadius: 50,
   backgroundColor: 'transparent',
 })
