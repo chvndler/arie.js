@@ -3,14 +3,16 @@ import Head from 'next/head'
 import {ArieLogo} from '../assets/ArieLogo'
 import {VersionBadge} from '../components/VersionBadge'
 import {Container} from '../components/Container'
-import {Space} from '../components/Space'
 import {Canvas} from '../components/Canvas'
 import {DefaultArie} from '../components/DefaultArie'
 import {Box} from '../components/Box'
 import {TrackArie} from '../components/TrackArie'
 import {AngleArie} from '../components/Angle'
 import {Flex} from '../components/Flex'
-import {CopyToClipboard} from '../components/Copy'
+import {GitHubLink} from '../components/GitHub'
+import {Space} from '../components/Space'
+import {PassLink} from '../components/PassLink'
+import {ToClipboard} from '../components/CopyToClipboard'
 
 const Index = () => {
   return (
@@ -41,12 +43,15 @@ const Index = () => {
               <AngleArie />
             </Flex>
             <DefaultArie />
+            <Space size={'3'} />
+
+            <PassLink href={'https://github.com/chvndler/arie.js'}>
+              <GitHubLink />
+            </PassLink>
+            <Space size={'2'} />
+            <ToClipboard />
           </Container>
         </Canvas>
-
-        <Container>
-          <CopyToClipboard />
-        </Container>
       </main>
     </>
   )
