@@ -15,19 +15,23 @@ export const ToClipboard = () => {
     <Container css={{position: 'relative'}}>
       <Flex
         css={{
+          transition: 'all 0.2s ease',
           maxWidth: '100%',
-          boxShadow: ` 0 0 10px 2px ${theme.colors.portage}`,
-          border: `1px solid ${theme.colors.chxn4A}`,
-          borderRadius: 10,
+          boxShadow: ` 0 0 10px 2px ${theme.colors.heliotrope}`,
+          border: `1.5px solid ${theme.colors.chxn4A}`,
+          borderRadius: 12,
           lineHeight: 1,
           alignItems: 'center',
           color: theme.colors.chxn4,
-          backgroundColor: 'rgba(0,0,0,.06)',
+          backgroundColor: theme.colors.slateA5,
           paddingTop: 5,
           paddingBottom: 5,
           paddingLeft: 12,
           paddingRight: 5,
           justifyContent: 'space-between',
+
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
           '&:hover': {
             backgroundColor: 'rgba(0,0,0,.04)',
           },
@@ -42,7 +46,7 @@ export const ToClipboard = () => {
             border: `1px solid ${theme.colors.chxn2}`,
             color: theme.colors.chxn3,
             marginLeft: 22,
-            borderRadius: 6,
+            borderRadius: 7,
             height: 'auto',
 
             '&:hover': {

@@ -29,7 +29,7 @@ const styledBadge = styled('div', {
   paddingTop: 5,
   paddingBottom: 5,
   margin: 'auto',
-  border: '1px solid lightgray',
+  // border: '1px solid lightgray',
   borderRadius: 8,
   backgroundColor: 'transparent',
 })

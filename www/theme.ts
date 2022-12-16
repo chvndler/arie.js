@@ -1,4 +1,3 @@
-
 import type * as Stitches from '@stitches/react'
 import {createStitches, defaultThemeMap} from '@stitches/react'
 
@@ -30,6 +29,19 @@ export const {styled, css, theme, createTheme, getCssText, globalCss, keyframes,
         ruby: 'rgb(216, 43, 98)',
         winterSky: 'rgb(255, 50, 115)',
 
+          slateA1: 'hsla(210, 92.6%, 26.5%, 0.016)',
+  slateA2: 'hsla(210, 87.7%, 16.0%, 0.028)',
+  slateA3: 'hsla(210, 98.8%, 14.4%, 0.055)',
+  slateA4: 'hsla(210, 94.1%, 11.1%, 0.075)',
+  slateA5: 'hsla(216, 91.1%, 10.9%, 0.099)',
+  slateA6: 'hsla(206, 96.4%, 11.3%, 0.126)',
+  slateA7: 'hsla(210, 99.1%, 10.1%, 0.157)',
+  slateA8: 'hsla(205, 96.5%, 10.0%, 0.244)',
+  slateA9: 'hsla(206, 98.8%, 5.9%, 0.467)',
+  slateA10: 'hsla(206, 99.6%, 5.4%, 0.506)',
+  slateA11: 'hsla(206, 97.0%, 4.8%, 0.593)',
+  slateA12: 'hsla(202, 97.0%, 2.4%, 0.934)',
+
         chxn1: '#f7f0f0',
         chxn2: '#bcc1cd',
         chxn3: '#A09FA6',
@@ -59,23 +71,10 @@ export const {styled, css, theme, createTheme, getCssText, globalCss, keyframes,
         fb: '#4267B2',
       },
       fonts: {
-        inter: '"Inter", sans-serif',
-        scto: '"Scto Grotesk A Regular", sans-serif',
-        sctoBold: '"Scto Grotesk A Bold", sans-serif',
         system:
           '-apple-system,Helvetica,sans-serif,"Apple Color Emoji","Segoe UI Emoji", sans-serif',
 
-        mono: '"At Hauss Mono Retina", monospace',
-        monoBold: '"At Hauss Mono Bold", monospace',
-        monoMedium: '"At Hauss Mono Medium", monospace',
-        monoSemibold: '"At Hauss Mono Semibold", monospace',
-
-        helvRound: '"Helvetica Rounded Bold", sans-serif',
-
-        panB: '"PP Pangram Sans Rounded Bold", sans-serif',
-        panSb: '"PP Pangram Sans Rounded Semibold", sans-serif',
-        panMd: '"PP Pangram Sans Rounded Medium", sans-serif',
-        panRg: '"PP Pangram Sans Rounded Regular", sans-serif',
+        mono: '"EK Modena Mono", monospace',
 
         latBoldStd: '"Lateral Standard Bold", sans-serif',
         latMedStd: '"Lateral Standard Medium", sans-serif',

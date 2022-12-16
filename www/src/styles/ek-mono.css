@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'EK Modena Mono';
+    src: url('/fonts/ek/EKModenaMono-Medium.woff2');
+    src: local('EK Modena Mono Medium'), local('EKModenaMono-Medium'), url('/fonts/ek/EKModenaMono-Medium.eot') format('embedded-opentype'), url('/fonts/ek/EKModenaMono-Medium.woff2') format('woff2'), url('/fonts/ek/EKModenaMono-Medium.woff') format('woff'), url('/fonts/ek/EKModenaMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

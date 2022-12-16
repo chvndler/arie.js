@@ -2,18 +2,16 @@ import React from 'react'
 import {theme} from '../../theme'
 import {GitHubIcon} from '../assets/icons'
 import {Box} from './Box'
-import {Flex} from './Flex'
+import {Button} from './Button'
 
 export const GitHubLink = () => {
   return (
     <>
       <Box css={{color: theme.colors.arena}}>
-        <Flex
-          css={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '6px'}}
-        >
+        <Button size={'icon'} css={{display: 'flex', gap: '5px'}}>
           <GitHubIcon />
-          <p>View on GitHub</p>
-        </Flex>
+          {` `}View on GitHub
+        </Button>
       </Box>
     </>
   )
