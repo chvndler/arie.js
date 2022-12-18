@@ -25,12 +25,7 @@ import {Cursor, EventType} from './types'
  * ------------------------------ initArie_CURSOR ----------------------------------------------*
  * ------------------------------------------------------------------------*
  **/
-/*
- function pad(str: string | any[], max: number) {
-   str = str.toString()
-   return str.length < max ? pad('0' + str, max) : str
- }
-*/
+
 const initArie: Cursor = {
   position: {
     client: {x: null, y: null},
