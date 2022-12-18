@@ -24,15 +24,22 @@
         "typescript": "^4.9.4"
     },
     "prettier": {
+        "arrowParens": "always",
         "bracketSameLine": true,
         "bracketSpacing": false,
+        "embeddedLanguageFormatting": "auto",
+        "htmlWhitespaceSensitivity": "css",
+        "insertPragma": false,
+        "jsxSingleQuote": true,
+        "printWidth": 120,
+        "proseWrap": "preserve",
+        "quoteProps": "preserve",
+        "requirePragma": false,
         "semi": false,
+        "singleAttributePerLine": false,
         "singleQuote": true,
-        "arrowParens": "always",
-        "tabWidth": 2,
-        "useTabs": false,
-        "printWidth": 100,
-        "trailingComma": "es5",
-        "singleAttributePerLine": false
+        "tabWidth": 1,
+        "trailingComma": "none",
+        "useTabs": false
     }
 }

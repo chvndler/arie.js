@@ -30,34 +30,10 @@ function _taggedTemplateLiteralLoose(strings, raw) {
 }
 
 /**
- *
- * @description
- * Renders a string of numbers displaying
- * CURSOR and SCROLL information/data.
- *
- * @author = Chandler Chappell <@chvndler>
- * @license = This package is provided "as is," without warranty of any kind, expressed or implied.
- * In no event shall the author be held liable for any damages arising in any way from the use of this package.
- *
- * https://github.com/chvndler
- * Copyright © 2022. CDC® All rights reserved.
- *
- * LICENSE MIT 2022
- *
- * Have fun.
- *
- **/
-/**
  * ----------------------------------------------------------------------------------*
  * ------------------------------ initArie_CURSOR ----------------------------------------------*
  * ------------------------------------------------------------------------*
  **/
-/*
- function pad(str: string | any[], max: number) {
-   str = str.toString()
-   return str.length < max ? pad('0' + str, max) : str
- }
-*/
 var initArie = {
   position: {
     client: {
@@ -253,25 +229,8 @@ var useArieCursor = function useArieCursor(touchEnabled, selectedElementId, sele
 var useArie = useArieCursor;
 
 var _templateObject;
-/**
- *
- * @description
- * Render a string of text displaying
- * pointer coordinates and scroll data.
- *
- * @author: Chandler Chappell <@chvndler>
- * @license This package is provided "as is," without warranty of any kind, expressed or implied.
- * In no event shall the author be held liable for any damages arising in any way from the use of this package.
- *
- * https://github.com/chvndler
- * Copyright © 2022. CDC® All rights reserved.
- *
- **/
-/* -------------------------------------------------------------------------------------------------
- * PointerValue
- * -----------------------------------------------------------------------------------------------*/
 var PointerValue = function PointerValue() {
-  var _useState = React.useState('traxx©'),
+  var _useState = React.useState('0000'),
     value = _useState[0],
     setValue = _useState[1];
   React.useEffect(function () {
@@ -379,7 +338,7 @@ var ScrollData = function ScrollData() {
     className: '--traxx-scroll-value'
   }, React.createElement(ScrollValue, null));
 };
-var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-family: monospace;\n  font-size: 1rem;\n  font-weight: 600;\n"])));
+var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n font-family: monospace;\n font-size: 1rem;\n font-weight: 600;\n"])));
 var DataString = StyledString;
 ////////////////////////////////////////
 var ArieCursor = PointerData;
