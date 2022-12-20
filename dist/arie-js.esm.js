@@ -1,4 +1,4 @@
-import { useState, useEffect, createElement } from 'react';
+import { useState, useEffect, createElement, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 
 function _extends() {
@@ -367,11 +367,13 @@ var ScrollData = function ScrollData() {
     className: '--traxx-scroll-value'
   }, createElement(ScrollValue, null));
 };
-var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-family: monospace;\n  font-size: 1rem;\n  font-weight: 600;\n"])));
+var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n font-family: monospace;\n font-size: 1rem;\n font-weight: 600;\n"])));
 var DataString = StyledString;
 ////////////////////////////////////////
 var ArieCursor = PointerData;
 var ArieScroll = ScrollData;
 
-export { ArieCursor, ArieScroll, useArie };
+var useIsomorphicLayoutEffect = typeof document !== 'undefined' ? useLayoutEffect : useEffect;
+
+export { ArieCursor, ArieScroll, useArie, useIsomorphicLayoutEffect };
 //# sourceMappingURL=arie-js.esm.js.map

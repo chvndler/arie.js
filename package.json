@@ -14,8 +14,8 @@
     ],
     "license": "MIT",
     "main": "./dist/index.js",
-    "module": "./dist/arie.esm.js",
-    "exports": "./dist/arie.esm.js",
+    "module": "./dist/arie-js.esm.js",
+    "exports": "./dist/arie-js.esm.js",
     "typings": "./dist/index.d.ts",
     "types": "./dist/index.d.ts",
     "engines": {
@@ -82,5 +82,8 @@
     },
     "publishConfig": {
         "access": "public"
+    },
+    "dependencies": {
+        "pts": "^0.11.3"
     }
 }

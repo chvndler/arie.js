@@ -373,13 +373,16 @@ var ScrollData = function ScrollData() {
     className: '--traxx-scroll-value'
   }, React.createElement(ScrollValue, null));
 };
-var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-family: monospace;\n  font-size: 1rem;\n  font-weight: 600;\n"])));
+var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n font-family: monospace;\n font-size: 1rem;\n font-weight: 600;\n"])));
 var DataString = StyledString;
 ////////////////////////////////////////
 var ArieCursor = PointerData;
 var ArieScroll = ScrollData;
 
+var useIsomorphicLayoutEffect = typeof document !== 'undefined' ? React.useLayoutEffect : React.useEffect;
+
 exports.ArieCursor = ArieCursor;
 exports.ArieScroll = ArieScroll;
 exports.useArie = useArie;
+exports.useIsomorphicLayoutEffect = useIsomorphicLayoutEffect;
 //# sourceMappingURL=arie-js.cjs.development.js.map
