@@ -265,7 +265,7 @@ var _templateObject;
  * PointerValue
  * -----------------------------------------------------------------------------------------------*/
 var PointerValue = function PointerValue() {
-  var _useState = React.useState('traxx©'),
+  var _useState = React.useState('arie.js'),
     value = _useState[0],
     setValue = _useState[1];
   React.useEffect(function () {
@@ -304,7 +304,7 @@ var PointerValue = function PointerValue() {
  */
 var PointerData = function PointerData() {
   return React.createElement("div", {
-    className: '--traxx-pointer-value'
+    className: '--arie-pointer-value'
   }, React.createElement(PointerValue, null));
 };
 var scrollFraction = function scrollFraction(_ref) {
@@ -370,10 +370,10 @@ var ScrollValue = function ScrollValue() {
  */
 var ScrollData = function ScrollData() {
   return React.createElement("div", {
-    className: '--traxx-scroll-value'
+    className: '--arie-scroll-value'
   }, React.createElement(ScrollValue, null));
 };
-var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n font-family: monospace;\n font-size: 1rem;\n font-weight: 600;\n"])));
+var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-family: monospace;\n  font-size: 1rem;\n  font-weight: 600;\n"])));
 var DataString = StyledString;
 ////////////////////////////////////////
 var ArieCursor = PointerData;

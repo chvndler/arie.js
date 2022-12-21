@@ -76,7 +76,7 @@
         "semi": false,
         "singleAttributePerLine": false,
         "singleQuote": true,
-        "tabWidth": 1,
+        "tabWidth": 2,
         "trailingComma": "none",
         "useTabs": false
     },

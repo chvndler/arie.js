@@ -30,27 +30,27 @@ const initArie: Cursor = {
   position: {
     client: {x: null, y: null},
     screen: {x: null, y: null},
-    page: {x: null, y: null},
+    page: {x: null, y: null}
   },
   scroll: {
     wheelDown: null,
-    wheelUp: null,
+    wheelUp: null
   },
   eventType: null,
   selectedElement: {
     position: {
       x: null,
       y: null,
-      angle: null,
+      angle: null
     },
     boundingRect: {
       left: null,
       top: null,
       width: null,
-      height: null,
+      height: null
     },
-    isHover: false,
-  },
+    isHover: false
+  }
 }
 
 const useArieCursor = (
@@ -112,8 +112,7 @@ const useArieCursor = (
       selectedElPosition.y = clientY - top - selectedElementOffset.y
       const rad2Deg = 180 / Math.PI
       const angleOffset = 180
-      selectedElPosition.angle =
-        Math.atan2(selectedElPosition.y, -selectedElPosition.x) * rad2Deg + angleOffset
+      selectedElPosition.angle = Math.atan2(selectedElPosition.y, -selectedElPosition.x) * rad2Deg + angleOffset
       selectedElBoundingRect.left = left
       selectedElBoundingRect.top = top
       selectedElBoundingRect.width = width
@@ -125,15 +124,15 @@ const useArieCursor = (
       position: {
         client: {x: clientX, y: clientY},
         screen: {x: screenX, y: screenY},
-        page: {x: pageX, y: pageY},
+        page: {x: pageX, y: pageY}
       },
       scroll,
       eventType: event.type,
       selectedElement: {
         ...prevState.selectedElement,
         position: selectedElPosition,
-        boundingRect: selectedElBoundingRect,
-      },
+        boundingRect: selectedElBoundingRect
+      }
     }))
   }
 
@@ -146,7 +145,7 @@ const useArieCursor = (
     selectedElement.isHover = true
     setCursor((prevState) => ({
       ...prevState,
-      selectedElement,
+      selectedElement
     }))
   }
 
@@ -155,7 +154,7 @@ const useArieCursor = (
     selectedElement.isHover = false
     setCursor((prevState) => ({
       ...prevState,
-      selectedElement,
+      selectedElement
     }))
   }
 
