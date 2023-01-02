@@ -200,5 +200,4 @@ const useArieCursor = (
  * ------------------------------ EXPORT ----------------------------------------------*
  * ------------------------------------------------------------------------*
  **/
-const useArie = useArieCursor
-export {useArie}
+export const useArie = useArieCursor
