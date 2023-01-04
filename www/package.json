@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "@stitches/react": "^1.2.8",
-        "arie-js": "0.0.4-beta.6",
+        "arie-js": "0.0.5",
         "copy-to-clipboard": "^3.3.3",
         "next": "^13.0.7",
         "react": "^18.2.0",
@@ -21,6 +21,7 @@
     "devDependencies": {
         "@babel/core": "^7.20.7",
         "@mdx-js/react": "^2.2.1",
+        "@next/bundle-analyzer": "^13.1.1",
         "@storybook/addon-actions": "^6.5.15",
         "@storybook/addon-docs": "^6.5.15",
         "@storybook/addon-essentials": "^6.5.15",
@@ -35,6 +36,7 @@
         "@types/react-dom": "^18.0.9",
         "@types/styled-components": "^5.1.26",
         "babel-loader": "^9.1.0",
+        "next-transpile-modules": "^10.0.0",
         "typescript": "^4.9.4"
     },
     "prettier": {
@@ -52,7 +54,7 @@
         "semi": false,
         "singleAttributePerLine": false,
         "singleQuote": true,
-        "tabWidth": 1,
+        "tabWidth": 2,
         "trailingComma": "none",
         "useTabs": false
     }

@@ -1,5 +1,5 @@
-import {useEffect, useState} from 'react'
-import {Cursor, EventType} from './types'
+import * as React from 'react'
+import type {Cursor, EventType} from '../types'
 
 /**
  *
@@ -58,7 +58,7 @@ const useArieCursor = (
   selectedElementId: string | null = null,
   selectedElementOffset: {x: number; y: number} = {x: 0, y: 0}
 ): Cursor => {
-  const [cursor, setCursor] = useState<Cursor>(initArie)
+  const [cursor, setCursor] = React.useState<Cursor>(initArie)
   let selectedEl: HTMLElement | null = null
 
   const onCursorTouchEvent = (event: Event): void => {
@@ -158,7 +158,7 @@ const useArieCursor = (
     }))
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (selectedElementId) {
       selectedEl = document.getElementById(selectedElementId)
       if (!selectedEl) {
@@ -200,4 +200,7 @@ const useArieCursor = (
  * ------------------------------ EXPORT ----------------------------------------------*
  * ------------------------------------------------------------------------*
  **/
-export const useArie = useArieCursor
+
+const useArie = useArieCursor
+
+export {useArie}

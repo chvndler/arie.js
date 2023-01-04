@@ -21,6 +21,9 @@ function _extends() {
   };
   return _extends.apply(this, arguments);
 }
+function _objectDestructuringEmpty(obj) {
+  if (obj == null) throw new TypeError("Cannot destructure " + obj);
+}
 function _taggedTemplateLiteralLoose(strings, raw) {
   if (!raw) {
     raw = strings.slice(0);
@@ -100,9 +103,9 @@ var useArieCursor = function useArieCursor(touchEnabled, selectedElementId, sele
       y: 0
     };
   }
-  var _useState = React.useState(initArie),
-    cursor = _useState[0],
-    setCursor = _useState[1];
+  var _React$useState = React.useState(initArie),
+    cursor = _React$useState[0],
+    setCursor = _React$useState[1];
   var selectedEl = null;
   var onCursorTouchEvent = function onCursorTouchEvent(event) {
     var clientX;
@@ -247,27 +250,13 @@ var useArieCursor = function useArieCursor(touchEnabled, selectedElementId, sele
 var useArie = useArieCursor;
 
 var _templateObject;
-/**
- *
- * @description
- * Render a string of text displaying
- * pointer coordinates and scroll data.
- *
- * @author: Chandler Chappell <@chvndler>
- * @license This package is provided "as is," without warranty of any kind, expressed or implied.
- * In no event shall the author be held liable for any damages arising in any way from the use of this package.
- *
- * https://github.com/chvndler
- * Copyright © 2022. CDC® All rights reserved.
- *
- **/
-/* -------------------------------------------------------------------------------------------------
- * PointerValue
- * -----------------------------------------------------------------------------------------------*/
+var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-family: monospace;\n  font-size: 1rem;\n  font-weight: 600;\n"])));
+var DataString = StyledString;
+
 var PointerValue = function PointerValue() {
-  var _useState = React.useState('arie.js'),
-    value = _useState[0],
-    setValue = _useState[1];
+  var _React$useState = React.useState('arie.js'),
+    value = _React$useState[0],
+    setValue = _React$useState[1];
   React.useEffect(function () {
     var format = function format(num, pad) {
       if (pad === void 0) {
@@ -302,11 +291,15 @@ var PointerValue = function PointerValue() {
  * Pass this component to a parent for styling.
  *
  */
-var PointerData = function PointerData() {
-  return React.createElement("div", {
+var PointerData = function PointerData(_ref) {
+  var props = _extends({}, (_objectDestructuringEmpty(_ref), _ref));
+  return React.createElement("div", Object.assign({}, props, {
     className: '--arie-pointer-value'
-  }, React.createElement(PointerValue, null));
+  }), React.createElement(PointerValue, null));
 };
+////////////////////////////////////////
+var useArieCursor$1 = PointerData;
+
 var scrollFraction = function scrollFraction(_ref) {
   var window = _ref.window,
     document = _ref.document;
@@ -320,9 +313,9 @@ var ScrollValue = function ScrollValue() {
    * useState (can be used to set the initial value of the state)
    * default is 'traxx©'
    */
-  var _useState2 = React.useState('traxx©'),
-    value = _useState2[0],
-    setValue = _useState2[1];
+  var _React$useState = React.useState('traxx©'),
+    value = _React$useState[0],
+    setValue = _React$useState[1];
   React.useEffect(function () {
     /**
      *
@@ -368,21 +361,19 @@ var ScrollValue = function ScrollValue() {
  * Pass this component to a parent for styling.
  *
  */
-var ScrollData = function ScrollData() {
-  return React.createElement("div", {
+var ScrollData = function ScrollData(_ref2) {
+  var props = _extends({}, (_objectDestructuringEmpty(_ref2), _ref2));
+  return React.createElement("div", Object.assign({}, props, {
     className: '--arie-scroll-value'
-  }, React.createElement(ScrollValue, null));
+  }), React.createElement(ScrollValue, null));
 };
-var StyledString = /*#__PURE__*/styled.p(_templateObject || (_templateObject = /*#__PURE__*/_taggedTemplateLiteralLoose(["\n  font-family: monospace;\n  font-size: 1rem;\n  font-weight: 600;\n"])));
-var DataString = StyledString;
 ////////////////////////////////////////
-var ArieCursor = PointerData;
-var ArieScroll = ScrollData;
+var useArieScroll = ScrollData;
 
 var useIsomorphicLayoutEffect = typeof document !== 'undefined' ? React.useLayoutEffect : React.useEffect;
 
-exports.ArieCursor = ArieCursor;
-exports.ArieScroll = ArieScroll;
 exports.useArie = useArie;
+exports.useArieCursor = useArieCursor$1;
+exports.useArieScroll = useArieScroll;
 exports.useIsomorphicLayoutEffect = useIsomorphicLayoutEffect;
 //# sourceMappingURL=arie-js.cjs.development.js.map

@@ -8,11 +8,11 @@ import {Box} from './Box'
 export const TrackArie = () => {
   const {
     selectedElement: {
-      position: {angle: angleRightEye},
-    },
+      position: {angle: angle}
+    }
   } = useArie(true, 'right-eye', {x: 0, y: 0})
 
-  const rotateRightEye = `rotate(${-angleRightEye}deg)`
+  const rotateHead = `rotate(${-angle}deg)`
 
   return (
     <>
@@ -21,28 +21,26 @@ export const TrackArie = () => {
           display: 'flex',
           alignItems: 'flex-end',
           margin: 'auto',
-          justifyContent: 'flex-end',
+          justifyContent: 'flex-end'
         }}
       >
         <Box
-          id="right-eye"
-          className="eye"
+          id='right-eye'
+          className='eye'
           css={{
-            //ctransform: rotateRightEye,
             padding: 12,
-            borderRadius: 50,
-            // sborder: '1px solid lightgray',
+            borderRadius: 50
           }}
         >
           <Box
             className={'pupil'}
             css={{
-              transform: rotateRightEye,
+              transform: rotateHead,
               height: 6,
-              width: 20,
+              width: 30,
               borderRadius: 4,
               backgroundColor: theme.colors.slateA10,
-              boxShadow: `0 0 6px 1px ${theme.colors.heliotrope}`,
+              boxShadow: `0 0 6px 1px ${theme.colors.heliotrope}`
             }}
           />
         </Box>

@@ -17,7 +17,9 @@ export const ToClipboard = () => {
         css={{
           transition: 'all 0.2s ease',
           maxWidth: '100%',
-          boxShadow: ` 0 0 10px 2px ${theme.colors.heliotrope}`,
+          boxShadow: `
+           0 0 12px 2px ${theme.colors.heliotrope}
+           `,
           border: `1.5px solid ${theme.colors.chxn4A}`,
           borderRadius: 12,
           lineHeight: 1,
@@ -33,14 +35,14 @@ export const ToClipboard = () => {
           backdropFilter: 'blur(10px)',
           WebkitBackdropFilter: 'blur(10px)',
           '&:hover': {
-            backgroundColor: 'rgba(0,0,0,.04)',
-          },
+            backgroundColor: 'rgba(0,0,0,.04)'
+          }
         }}
       >
         <Box css={{marginRight: 22}}>npm install --save arie-js</Box>
 
         <IconButton
-          as="button"
+          as='button'
           css={{
             backgroundColor: 'transparent',
             border: `1px solid ${theme.colors.chxn2}`,
@@ -50,10 +52,10 @@ export const ToClipboard = () => {
             height: 'auto',
 
             '&:hover': {
-              backgroundColor: 'rgba(0,0,0,.1)',
-            },
+              backgroundColor: 'rgba(0,0,0,.1)'
+            }
           }}
-          aria-label="Copy the install snippet to Clipboard"
+          aria-label='Copy the install snippet to Clipboard'
           onClick={() => {
             copy('npm install --save arie-js')
             setHasCopied(true)

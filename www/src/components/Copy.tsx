@@ -29,14 +29,14 @@ export const CopyToClipboard = () => {
           paddingRight: 5,
           justifyContent: 'space-between',
           '&:hover': {
-            backgroundColor: 'rgba(0,0,0,.04)',
-          },
+            backgroundColor: 'rgba(0,0,0,.04)'
+          }
         }}
       >
         <Box css={{marginRight: 22}}>npm install --save arie-js</Box>
 
         <IconButton
-          as="button"
+          as='button'
           css={{
             backgroundColor: 'transparent',
             border: `1px solid ${theme.colors.chxn2}`,
@@ -46,10 +46,10 @@ export const CopyToClipboard = () => {
             height: 'auto',
 
             '&:hover': {
-              backgroundColor: 'rgba(0,0,0,.1)',
-            },
+              backgroundColor: 'rgba(0,0,0,.1)'
+            }
           }}
-          aria-label="Copy the install snippet to Clipboard"
+          aria-label='Copy the install snippet to Clipboard'
           onClick={() => {
             copy('npm install --save arie-js')
             setHasCopied(true)

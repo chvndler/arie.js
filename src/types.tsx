@@ -1,8 +1,8 @@
 import {useEffect, useRef, forwardRef, ForwardedRef} from 'react'
 import {CanvasSpace, Bound, CanvasForm, Group, Tempo, IPlayer} from 'pts'
-import {useIsomorphicLayoutEffect} from './hooks'
+import {useIsomorphicLayoutEffect} from './arie'
 
-import React from 'react'
+import * as React from 'react'
 /**
  *
  *
@@ -41,7 +41,7 @@ export type Cursor = {
   selectedElement: SelectedElement
 }
 
-type SelectedElement = {
+export type SelectedElement = {
   /*
    * Mouse relative position to selected element
    */

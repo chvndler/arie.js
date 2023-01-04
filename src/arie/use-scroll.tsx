@@ -1,6 +1,5 @@
 import * as React from 'react'
-import {useEffect, useState} from 'react'
-import styled from 'styled-components'
+import {DataString} from './styles'
 /**
  *
  * @description
@@ -17,62 +16,6 @@ import styled from 'styled-components'
  **/
 
 /* -------------------------------------------------------------------------------------------------
- * PointerValue
- * -----------------------------------------------------------------------------------------------*/
-
-const PointerValue = () => {
-  const [value, setValue] = useState('arie.js')
-
-  useEffect(() => {
-    const format = (num: number | string, pad = 4) => {
-      return num.toString().padStart(pad, '0')
-    }
-    const setFromEvent = (event: {clientX: number | string; clientY: number | string}) => {
-      const x = format(event.clientX, 5)
-      const y = format(event.clientY, 5)
-      setValue(`X: ${x}, Y: ${y}`)
-    }
-
-    window.addEventListener('mousemove', setFromEvent)
-
-    return () => {
-      window.removeEventListener('mousemove', setFromEvent)
-    }
-  }, [])
-
-  /**
-   *
-   * @returns {value}. - A decimal value for each X and Y axis.
-   * This component renders a string of numbers displaying
-   * pointer coordinates and event data.
-   *
-   */
-
-  return (
-    <DataString>
-      <span>{value}</span>
-    </DataString>
-  )
-}
-
-/**
- *
- * @returns {component}.
- * <span> - A decimal value for each X and Y axis.
- *
- * Pass this component to a parent for styling.
- *
- */
-
-const PointerData = () => {
-  return (
-    <div className={'--arie-pointer-value'}>
-      <PointerValue />
-    </div>
-  )
-}
-
-/* -------------------------------------------------------------------------------------------------
  * ScrollValue
  * -----------------------------------------------------------------------------------------------*/
 
@@ -85,7 +28,13 @@ interface scrollProps {
    * The document object.
    */
   document: Document
+  /**
+   * className for custom styling..
+   */
+  className?: string
 }
+
+type component = JSX.Element
 
 const scrollFraction = ({window, document}: scrollProps) => {
   /**
@@ -99,9 +48,9 @@ const ScrollValue = () => {
    * useState (can be used to set the initial value of the state)
    * default is 'traxx©'
    */
-  const [value, setValue] = useState('traxx©')
+  const [value, setValue] = React.useState('traxx©')
 
-  useEffect(() => {
+  React.useEffect(() => {
     /**
      *
      * @param num
@@ -151,30 +100,19 @@ const ScrollValue = () => {
  *
  */
 
-const ScrollData = () => {
+const ScrollData = ({...props}: scrollProps): component => {
   return (
-    <div className={'--arie-scroll-value'}>
+    <div {...props} className={'--arie-scroll-value'}>
       <ScrollValue />
     </div>
   )
 }
 
-const StyledString = styled.p`
-  font-family: monospace;
-  font-size: 1rem;
-  font-weight: 600;
-`
-
-const DataString = StyledString
-
 ////////////////////////////////////////
-const ArieCursor = PointerData
-const ArieScroll = ScrollData
+const useArieScroll = ScrollData
 //////////////////////////////////////
 
 export {
   //
-  ArieCursor,
-  //
-  ArieScroll
+  useArieScroll
 }

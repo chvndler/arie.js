@@ -1,5 +1,5 @@
 import { CanvasSpace, Bound, CanvasForm, Group, Tempo, IPlayer } from 'pts';
-import React from 'react';
+import * as React from 'react';
 /**
  *
  *
@@ -31,7 +31,7 @@ export declare type Cursor = {
     eventType: string | null;
     selectedElement: SelectedElement;
 };
-declare type SelectedElement = {
+export declare type SelectedElement = {
     position: {
         angle: number | null;
         x: number | null;
@@ -224,4 +224,3 @@ export declare type DefaultFormStyle = {
  * Typescript type: CanvasPatternRepetition represents the string options to specify pattern repetition
  */
 export declare type CanvasPatternRepetition = 'repeat' | 'repeat-x' | 'repeat-y' | 'no-repeat';
-export {};

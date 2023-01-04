@@ -42,14 +42,13 @@ const Index = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-
             position: 'absolute',
             left: 0,
             right: 0,
             bottom: 30,
             zIndex: 20,
             width: '100vw',
-            margin: 'auto',
+            margin: 'auto'
           }}
         >
           <TrackArie />
