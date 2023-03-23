@@ -1,3 +1,7 @@
 export * from './arie'
-
-export type {Cursor, EventType, SelectedElement} from './types'
+export type {
+  Cursor, 
+  // ..
+  EventType, 
+  SelectedElement
+} from './types'
