@@ -19,19 +19,8 @@ import {DataString} from './styles'
  * PointerValue
  * -----------------------------------------------------------------------------------------------*/
 
-type CursorProps = {
-  /**
-   * The window object.
-   */
-  window?: Window
-  document?: Document
-  className?: string
-}
-
-type component = JSX.Element
-
 const PointerValue = () => {
-  const [value, setValue] = React.useState('arie.js')
+  const [value, setValue] = React.useState('00000')
 
   React.useEffect(() => {
     const format = (num: number | string, pad = 4) => {
@@ -74,16 +63,11 @@ const PointerValue = () => {
  *
  */
 
-const PointerData = ({...props}: CursorProps): component => {
-  return (
-    <div {...props} className={'--arie-pointer-value'}>
-      <PointerValue />
-    </div>
-  )
+function useArieCursor() {
+  return <PointerValue />
 }
 
 ////////////////////////////////////////
-const useArieCursor = PointerData
 //////////////////////////////////////
 
 export {
