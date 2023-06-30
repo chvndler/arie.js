@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "A small component for displaying information based on user scroll and cursor position.",
   "author": "Chandler Chappell <chvndler.ch@icloud.com>",
-  "packageManager": "yarn@3.6.0",
+  "packageManager": "yarn@3.6.1",
   "private": true,
   "repository": {
     "type": "git",
