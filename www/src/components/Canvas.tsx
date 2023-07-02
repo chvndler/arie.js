@@ -11,7 +11,7 @@ export const Canvas = styled('div', {
   width: '100%',
   height: 'auto',
   margin: 'auto',
-  padding: '0',
+  padding: '0'
 })
 
 export const FixedCanvas = styled('div', {
@@ -24,5 +24,5 @@ export const FixedCanvas = styled('div', {
   width: '100%',
   height: '100%',
   minHeight: '100vh',
-  minWidth: '100vw',
+  minWidth: '100vw'
 })

@@ -25,21 +25,21 @@ export const StyledButton = styled('button', {
   color: theme.colors.slateA11,
 
   '&:hover': {
-    backgroundColor: theme.colors.slateA4,
+    backgroundColor: theme.colors.slateA4
   },
 
   '&::before': {
-    boxSizing: 'border-box',
+    boxSizing: 'border-box'
   },
   '&::after': {
-    boxSizing: 'border-box',
+    boxSizing: 'border-box'
   },
 
   '&:disabled': {
     backgroundColor: '$slate2',
     boxShadow: 'inset 0 0 0 1px $colors$slate7',
     color: '$slate8',
-    pointerEvents: 'none',
+    pointerEvents: 'none'
   },
 
   variants: {
@@ -51,12 +51,12 @@ export const StyledButton = styled('button', {
         paddingLeft: 12,
         paddingRight: 16,
         paddingTop: 5,
-        paddingBottom: 5,
+        paddingBottom: 5
       },
       '1': {
         fontSize: 13,
         borderRadius: 8,
-        padding: '6px 14px',
+        padding: '6px 14px'
       },
       '2': {
         borderRadius: 50,
@@ -66,19 +66,19 @@ export const StyledButton = styled('button', {
         height: 32,
         width: 'max-content',
         paddingLeft: 14,
-        paddingRight: 14,
-      },
+        paddingRight: 14
+      }
     },
 
     color: {
-      primary: {},
-    },
+      primary: {}
+    }
 
     // state....
   },
   defaultVariants: {
-    size: '1',
-  },
+    size: '1'
+  }
 })
 
 export const Button = StyledButton

@@ -1,9 +1,8 @@
+'use client'
+
 import React from 'react'
 
-import {useArie} from '../../../dist'
-import {theme} from '../../theme'
-// import {useArie} from 'arie-js'
-import {Box} from './Box'
+import {useArie} from 'arie'
 
 export const TrackArie = () => {
   const {
@@ -16,35 +15,35 @@ export const TrackArie = () => {
 
   return (
     <>
-      <Box
-        css={{
+      <section
+        style={{
           display: 'flex',
           alignItems: 'flex-end',
           margin: 'auto',
           justifyContent: 'flex-end'
         }}
       >
-        <Box
+        <div
           id='right-eye'
           className='eye'
-          css={{
+          style={{
             padding: 12,
             borderRadius: 50
           }}
         >
-          <Box
+          <div
             className={'pupil'}
-            css={{
+            style={{
               transform: rotateHead,
               height: 6,
               width: 30,
               borderRadius: 4,
-              backgroundColor: theme.colors.slateA10,
-              boxShadow: `0 0 6px 1px ${theme.colors.heliotrope}`
+              backgroundColor: 'white',
+              boxShadow: `0 0 0 2px black`
             }}
           />
-        </Box>
-      </Box>
+        </div>
+      </section>
     </>
   )
 }

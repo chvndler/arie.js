@@ -20,7 +20,7 @@ const styledBadge = styled('div', {
   paddingBottom: 5,
   margin: 'auto',
   backgroundColor: 'transparent',
-  color: '#291E1F',
+  color: '#291E1F'
 })
 
 const StyledBadge = styled(styledBadge)

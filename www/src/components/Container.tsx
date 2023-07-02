@@ -10,5 +10,5 @@ export const Container = styled('div', {
   boxSizing: 'border-box',
   flexShrink: 0,
   paddingLeft: 18,
-  paddingRight: 18,
+  paddingRight: 18
 })

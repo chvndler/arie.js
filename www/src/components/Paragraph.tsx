@@ -13,49 +13,49 @@ export const Paragraph = styled('span', {
   variants: {
     size: {
       '1': {
-        fontSize: '12px',
+        fontSize: '12px'
       },
       '2': {
-        fontSize: '13px',
+        fontSize: '13px'
       },
       '3': {
-        fontSize: '14px',
+        fontSize: '14px'
       },
       '4': {
-        fontSize: '15px',
+        fontSize: '15px'
       },
       '5': {
         fontSize: '$5',
-        letterSpacing: '-.015em',
+        letterSpacing: '-.015em'
       },
       '6': {
         fontSize: '$6',
-        letterSpacing: '-.016em',
+        letterSpacing: '-.016em'
       },
       '7': {
         fontSize: '$7',
         letterSpacing: '-.031em',
-        textIndent: '-.005em',
+        textIndent: '-.005em'
       },
       '8': {
         fontSize: '$8',
         letterSpacing: '-.034em',
-        textIndent: '-.018em',
+        textIndent: '-.018em'
       },
       '9': {
         fontSize: '$9',
         letterSpacing: '-.055em',
-        textIndent: '-.025em',
-      },
+        textIndent: '-.025em'
+      }
     },
 
     bold: {
       true: {
-        fontWeight: 'bold',
-      },
-    },
+        fontWeight: 'bold'
+      }
+    }
   },
   defaultVariants: {
-    size: '3',
-  },
+    size: '3'
+  }
 })
