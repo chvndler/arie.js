@@ -1,0 +1,23 @@
+
+@import 'inter-ui/inter.css';
+@import './fontface';
+@import './helpers';
+@import './normalize';
+@import './global';
+
+/**
+  *
+  * read first.
+  */
+
+html.fonts-loaded body {
+  opacity: 1 !important;
+}
+
+body {
+  transition: opacity #{$duration / 6 + 's'} ease-in !important;
+}
+
+.component-wrapper {
+  border: 1px solid black !important;
+}

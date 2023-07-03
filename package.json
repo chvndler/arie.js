@@ -1,8 +1,8 @@
 {
   "name": "arie",
   "version": "0.0.6",
-  "description": "A small component for displaying information based on user scroll and cursor position.",
-  "author": "Chandler Chappell <chvndler.ch@icloud.com>",
+  "description": "A compact component that showcases stylized information triggered by the user's cursor position.",
+  "author": "Chandler Chappell <chan@atlrdsgn.com>",
   "packageManager": "yarn@3.6.1",
   "private": true,
   "repository": {
@@ -10,7 +10,8 @@
     "url": "git+https://github.com/chvndler/arie.js.git"
   },
   "workspaces": [
-    "www"
+    "www",
+    "apps/*"
   ],
   "license": "MIT",
   "main": "./dist/arie.cjs",

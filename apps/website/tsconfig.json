@@ -1,0 +1,65 @@
+{
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "types": ["vite/client", "node"],
+    "importHelpers": true,
+    /**
+     * output .d.ts declaration files for consumers.
+     */
+    "declaration": true,
+    "sourceMap": true,
+    /**
+     * our root directory is `src`.
+     */
+    "rootDir": "src",
+    /**
+     * our output directory is `dist`.
+     */
+    "outDir": "dist",
+    /**
+     * declaration files should be emitted in the same directory as the output JS files.
+     */
+    "declarationDir": "dist",
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    /**
+     * use Node's module resolution algorithm, instead of the legacy TS one
+     */
+    "moduleResolution": "node",
+    /**
+     * transpile to React.createElement
+     */
+    "jsx": "react",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    /**
+     * don't emit any output files.
+     * `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
+     */
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/public/*": ["/public/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/entries/*": ["./entries/*"],
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/ts/*": ["./src/ts/*"],
+      "@/theme/*": ["./src/theme/*"],
+      "@/scss/*": ["./src/scss/*"],
+      "@/module-css/*": ["./src/scss/module-css/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  }
+}

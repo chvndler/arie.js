@@ -1,0 +1,113 @@
+/** @format */
+
+:root {
+  --pure-white: #fff;
+  --pure-black: #000;
+  --athens-gray: #f5f5f8;
+  --shark-gray: #1d1d1d;
+  --inspect: #f00;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --volt-blue: #b7b4fe;
+  /**
+    *
+    * type
+    */
+  --font-inter: 'Inter', 'system-ui', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pure-white: #000;
+    --pure-black: #fff;
+    --athens-gray: #212326;
+    --shark-gray: #f5f5f8;
+    --volt-blue: #9e87c5;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', 'system-ui', sans-serif;
+  }
+}
+
+*,
+*:active,
+*:focus {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html {
+  line-height: 1.5;
+  box-sizing: border-box;
+  text-rendering: geometricprecision;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  background: var(--athens-gray) !important;
+  color: var(--shark-gray);
+  font-family: var(--font-inter) !important;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body.inspect * {
+  outline: 0.5px dashed var(--inspect-color) !important;
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+
+/**
+  *
+  * @scrollbar-custom
+  * below
+  */
+
+::-webkit-scrollbar {
+  z-index: 99999999 !important;
+  width: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 6px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  z-index: 99999999 !important;
+  background-color: rgb(var(--volt-blue)) !important;
+  border-radius: 6px !important;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+::selection {
+  background-color: var(--athens-gray);
+  color: var(--volt-blue);
+  -webkit-text-fill-color: black;
+}
