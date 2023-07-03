@@ -1,6 +1,6 @@
 {
   "name": "arie-app",
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "yarn@3.6.1",
   "license": "MIT",
   "private": true,
   "scripts": {
