@@ -5,7 +5,5 @@ export { useArieScroll } from './pkg/use-scroll'; // useArieScroll
 export { useArieDot } from './pkg/use-dot'; // useArieDot
 
 // default(s)
-export * from './hooks/use-layout-effect'; // useIsomorphicLayoutEffect
+export {useIsomorphicLayoutEffect} from './hooks/use-layout-effect'; // useIsomorphicLayoutEffect
 
-// types
-export * from './types';
