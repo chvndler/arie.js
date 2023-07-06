@@ -1,30 +1,5 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import type { Cursor, EventType } from '../types';
-
-/**
- *
- * @description
- * Renders a string of numbers displaying
- * CURSOR and SCROLL information/data.
- *
- * @author = Chandler Chappell <@chvndler>
- * @license = This package is provided "as is," without warranty of any kind, expressed or implied.
- * In no event shall the author be held liable for any damages arising in any way from the use of this package.
- *
- * https://github.com/chvndler
- * Copyright © 2022. CDC® All rights reserved.
- *
- * LICENSE MIT 2022
- *
- * Have fun.
- *
- **/
-
-/**
- * ----------------------------------------------------------------------------------*
- * ------------------------------ initArie_CURSOR ----------------------------------------------*
- * ------------------------------------------------------------------------*
- **/
 
 const initArie: Cursor = {
   position: {
@@ -53,7 +28,7 @@ const initArie: Cursor = {
   },
 };
 
-const useArie = (
+export const useArie = (
   touchEnabled: boolean = true,
   selectedElementId: string | null = null,
   selectedElementOffset: { x: number; y: number } = { x: 0, y: 0 }
@@ -198,13 +173,3 @@ const useArie = (
 
   return cursor;
 };
-
-/**
- * ----------------------------------------------------------------------------------*
- * ------------------------------ EXPORT ----------------------------------------------*
- * ------------------------------------------------------------------------*
- **/
-
-export { useArie };
-
-

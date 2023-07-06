@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
+
 /**
- *
  * @description
- * Render a string of text displaying
- * pointer coordinates and scroll data.
+ * Creates a function that generates a formatted string of text(numbers) displaying the current pointer
+ * coordinates and(or) scroll data.
  *
  * @author: Chandler Chappell <@chvndler>
  * @license This package is provided "as is," without warranty of any kind, expressed or implied.
@@ -11,20 +11,15 @@ import { useState, useEffect } from 'react';
  *
  * https://github.com/chvndler
  * Copyright © 2022. CDC® All rights reserved.
- *
  **/
-
-export const useCursor = () => {
-  const [value, setValue] = useState('00000');
+export const useArieCursor = () => {
+  const [value, setValue] = useState<string>('X: 00000, Y: 00000');
 
   useEffect(() => {
-    const format = (num: { toString: () => string }, pad = 5) =>
+    const format = (num: number, pad = 5): string =>
       num.toString().padStart(pad, '0');
 
-    const setFromEvent = (event: {
-      clientX: { toString: () => string };
-      clientY: { toString: () => string };
-    }) => {
+    const setFromEvent = (event: MouseEvent): void => {
       const x = format(event.clientX);
       const y = format(event.clientY);
       setValue(`X: ${x}, Y: ${y}`);
@@ -37,5 +32,30 @@ export const useCursor = () => {
     };
   }, []);
 
-  return { value };
+  return value;
 };
+
+/**
+ * @description
+ * Creates a function that generates a formatted string of text(numbers) displaying the current pointer
+ * coordinates.
+ *
+ *
+ * @returns {string} - string
+ * A string containing the cursor's position and the dot's size.
+ *
+ * @example
+ * import { useCursorValue } from 'arie-js';
+ *
+ * const Component = () => {
+ *   const cursorValue = useCursorValue();
+ *
+ *  // ...
+ *
+ * return (
+ *  <div>
+ *   <p>{cursorValue}</p>
+ * </div>
+ * )
+ * }
+ */

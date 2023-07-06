@@ -1,10 +1,23 @@
 {
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
     "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "types": ["vite/client", "node"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "types": [
+      "vite/client",
+      "node"
+    ],
     "importHelpers": true,
     /**
      * output .d.ts declaration files for consumers.
@@ -13,8 +26,9 @@
     "sourceMap": true,
     /**
      * our root directory is `src`.
-     */
+     
     "rootDir": "src",
+    */
     /**
      * our output directory is `dist`.
      */
@@ -35,7 +49,7 @@
     /**
      * transpile to React.createElement
      */
-    "jsx": "react",
+    "jsx": "preserve",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
@@ -46,20 +60,42 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/public/*": ["/public/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/entries/*": ["./entries/*"],
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/ts/*": ["./src/ts/*"],
-      "@/theme/*": ["./src/theme/*"],
-      "@/scss/*": ["./src/scss/*"],
-      "@/module-css/*": ["./src/scss/module-css/*"]
+      "@/public/*": [
+        "/public/*"
+      ],
+      "@/lib/*": [
+        "./lib/*"
+      ],
+      "@/entries/*": [
+        "./entries/*"
+      ],
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/ts/*": [
+        "./src/ts/*"
+      ],
+      "@/theme/*": [
+        "./src/theme/*"
+      ],
+      "@/scss/*": [
+        "./src/scss/*"
+      ],
+      "@/module-css/*": [
+        "./src/scss/module-css/*"
+      ]
     },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "isolatedModules": true
   }
 }

@@ -1,16 +1,16 @@
 'use client';
 
 import React from 'react';
-import { value useArie } from 'arie';
+import { useArie } from 'arie';
 
 export const TrackArie = () => {
   const {
     selectedElement: {
       position: { angle: angle },
     },
-  } = useArie(true, 'right-eye', { x: 0, y: 0 });
+  } = useArie(true, 'right', { x: 0, y: 0 });
 
-  const rotateHead = `rotate(${-angle}deg)`;
+  const rotate = 'rotate(' + angle + 'deg)';
 
   return (
     <>
@@ -20,20 +20,18 @@ export const TrackArie = () => {
           alignItems: 'flex-end',
           margin: 'auto',
           justifyContent: 'flex-end',
-        }}
-      >
+        }}>
         <div
-          id='right-eye'
+          id='right'
           className='eye'
           style={{
             padding: 12,
             borderRadius: 50,
-          }}
-        >
+          }}>
           <div
             className={'pupil'}
             style={{
-              transform: rotateHead,
+              transform: rotate,
               height: 6,
               width: 30,
               borderRadius: 4,

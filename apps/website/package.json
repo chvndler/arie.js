@@ -11,6 +11,7 @@
     "clean": "rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
+    "@atlrdsgn/kit": "^0.3.0",
     "arie": "*",
     "clsx": "^1.2.1",
     "inter-ui": "^3.19.3",

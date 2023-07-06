@@ -10,7 +10,6 @@
     "url": "git+https://github.com/chvndler/arie.js.git"
   },
   "workspaces": [
-    "www",
     "apps/*"
   ],
   "license": "MIT",
@@ -40,38 +39,24 @@
     "dev": "vite --host",
     "build": "tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
     "test": "vitest",
-    "start": "tsdx watch",
-    "build:tsdx": "tsdx build",
-    "test:tsdx": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
     "release": "yarn build && npm publish --access public"
   },
   "dependencies": {
-    "@react-three/fiber": "^8.13.4",
     "pts": "^0.11.3",
-    "react-pts-canvas": "^0.3.4",
-    "react-three-fiber": "^6.0.13"
+    "react-pts-canvas": "^0.3.4"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.1",
     "@types/node": "^20.3.3",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
-    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
-    "babel-loader": "^9.1.0",
     "dts-bundle-generator": "^8.0.1",
-    "postcss": "^8.4.20",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^3.7.4",
-    "rollup-plugin-postcss": "^4.0.2",
-    "styled-components": "^6.0.0",
     "ts-node": "^10.9.1",
-    "tsdx": "^0.14.1",
     "tslib": "^2.4.1",
     "typescript": "^5.1.6",
     "vite": "^4.3.9",

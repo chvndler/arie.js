@@ -71,13 +71,49 @@ export type SelectedElement = {
   isHover: boolean;
 };
 
-export type EventType =
+export interface CursorDot {
+  dotSize?: number; // useArieDot() hook
+}
+
+export interface CursorDotPosition {
+  // useArieDot() hook
+  x: number;
+  y: number;
+}
+
+export interface ScrollProps {
+  // useArieScroll() hook
+
+  /**
+   * The window object.
+   */
+  window: Window;
+  /**
+   * The document object.
+   */
+  document: Document;
+  /**
+   * className for custom styling..
+   */
+  className?: string;
+}
+
+export type EType =
   | 'mousemove'
   | 'mousedown'
   | 'mouseup'
   | 'touchmove'
   | 'touchstart'
   | 'wheel';
+
+export type EventType = [
+  'mousemove',
+  'mousedown',
+  'mouseup',
+  'touchmove',
+  'touchstart',
+  'wheel'
+][number];
 
 /**
  *
