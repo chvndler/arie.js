@@ -1,0 +1,30 @@
+
+.yarn/
+yarn.lock
+
+.pnp.cjs
+.pnp.loader.mjs
+
+
+# vscode
+.vscode/
+.vscode
+
+# /dist
+/node_modules
+package-lock.json
+.DS_Store
+
+.DS_Store
+node_modules
+.turbo
+*.log
+.next
+
+
+*.local
+.env
+.cache
+server/dist
+public/dist
+storybook-static/

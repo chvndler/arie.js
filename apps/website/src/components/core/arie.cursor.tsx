@@ -3,7 +3,7 @@
 'use client';
 import React from 'react';
 
-import { useArieCursor } from 'arie';
+import { useArieCursor } from 'arie-js';
 
 export const CursorArie = () => {
   const cursorValue = useArieCursor();

@@ -1,6 +1,5 @@
 {
   "name": "arie-app",
-  "packageManager": "yarn@3.6.1",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -12,7 +11,7 @@
   },
   "dependencies": {
     "@atlrdsgn/kit": "^0.3.0",
-    "arie": "*",
+    "arie-js": "*",
     "clsx": "^1.2.1",
     "inter-ui": "^3.19.3",
     "next": "^13.4.4",

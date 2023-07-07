@@ -1,49 +1,30 @@
 {
-  "name": "arie.js",
-  "version": "1.0.0",
-  "description": "",
-  "author": "Chandler Chappell <chan@atlrdsgn.com>",
+  "name": "arie-js-root",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chvndler/arie.js.git"
-  },
-  "main": "./dist/arie.cjs",
-  "module": "./dist/arie.mjs",
-  "exports": {
-    ".": {
-      "require": "./dist/arie.cjs",
-      "import": "./dist/arie.mjs"
-    }
-  },
-  "typings": "./dist/arie.d.ts",
-  "types": "./dist/arie.d.ts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "dev": "vite --host",
-    "build": "tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
-    "test": "vitest",
+    "build": "turbo run build",
+    "build:kit": "turbo run build --filter=kit",
+    "build:kit:deps": "turbo run build --filter=kit^... --no-cache",
+    "build:app:dir": "turbo run build --filter='./apps/*'",
+    "build:pkg:dir": "turbo run build --filter='./package/*'",
+    "dev": "turbo run dev --no-cache --continue",
+    "lint": "turbo run lint",
     "clean": "turbo run clean && rm -rf node_modules",
     "pretty": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "release": "yarn build && npm publish --access public"
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=kit^... && changeset publish"
   },
-  "keywords": [],
-  "license": "MIT",
   "devDependencies": {
-    "@changesets/cli": "^2.26.2",
-    "@types/node": "^20.3.2",
-    "@types/react": "^18.2.12",
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "@typescript-eslint/parser": "^5.60.1",
-    "dts-bundle-generator": "^8.0.1",
-    "eslint": "^8.44.0",
-    "prettier": "^3.0.0",
-    "react": "^18.2.0",
-    "turbo": "^1.10.7",
-    "typescript": "^5.1.3",
-    "vite": "^4.4.1",
-    "vitest": "^0.33.0"
-  }
+    "@changesets/cli": "^2.26.1",
+    "eslint": "^8.42.0",
+    "eslint-config-atlrdsgn": "*",
+    "prettier": "^2.8.8",
+    "turbo": "^1.8.8"
+  },
+  "prettierIgnore": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
 }

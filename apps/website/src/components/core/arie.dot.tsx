@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
-import { useArieDot } from 'arie';
+import { useArieDot } from 'arie-js';
 
 export const DotArie = () => {
-  const { cursorPosition, dotSize = 10 } = useArieDot();
+  useArieDot({ dotSize: 10 });
+
+  const dotSize = 10;
 
   return (
     <>
@@ -13,8 +15,6 @@ export const DotArie = () => {
           className='dot'
           style={{
             position: 'absolute',
-            top: cursorPosition.y,
-            left: cursorPosition.x,
             width: dotSize,
             height: dotSize,
             borderRadius: '50%',
