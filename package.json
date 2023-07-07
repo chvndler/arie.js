@@ -1,18 +1,13 @@
 {
-  "name": "arie",
-  "version": "0.0.7",
-  "description": "A compact component that showcases stylized information triggered by the user's cursor position.",
+  "name": "arie.js",
+  "version": "1.0.0",
+  "description": "",
   "author": "Chandler Chappell <chan@atlrdsgn.com>",
-  "packageManager": "yarn@3.6.1",
   "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chvndler/arie.js.git"
   },
-  "workspaces": [
-    "apps/*"
-  ],
-  "license": "MIT",
   "main": "./dist/arie.cjs",
   "module": "./dist/arie.mjs",
   "exports": {
@@ -26,44 +21,29 @@
   "files": [
     "dist"
   ],
-  "keywords": [
-    "react",
-    "data",
-    "component",
-    "scroll",
-    "pointer",
-    "position",
-    "arie"
-  ],
   "scripts": {
     "dev": "vite --host",
     "build": "tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
     "test": "vitest",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "pretty": "prettier --write \"**/*.{ts,tsx,md}\"",
     "release": "yarn build && npm publish --access public"
   },
-  "dependencies": {
-    "pts": "^0.11.3",
-    "react-pts-canvas": "^0.3.4"
-  },
+  "keywords": [],
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.3.3",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^20.3.2",
+    "@types/react": "^18.2.12",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "dts-bundle-generator": "^8.0.1",
+    "eslint": "^8.44.0",
+    "prettier": "^3.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tslib": "^2.4.1",
-    "typescript": "^5.1.6",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2"
-  },
-  "resolutions": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "publishConfig": {
-    "access": "public"
+    "turbo": "^1.10.7",
+    "typescript": "^5.1.3",
+    "vite": "^4.4.1",
+    "vitest": "^0.33.0"
   }
 }

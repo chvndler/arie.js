@@ -1,0 +1,6 @@
+packages:
+  - 'pkgs/*'
+  - 'apps/*'
+
+root: .
+ignore-workspace-root-check: true

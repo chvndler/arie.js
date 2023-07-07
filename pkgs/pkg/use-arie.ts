@@ -48,7 +48,7 @@ export const useArie = (
     switch (event.type as EventType) {
       case 'mousemove':
       case 'mousedown':
-      case 'mouseup': 
+      case 'mouseup':
       case 'wheel':
         const cursorEvent = event as MouseEvent;
 
