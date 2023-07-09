@@ -12,8 +12,10 @@ import { useState, useEffect } from 'react';
  * https://github.com/chvndler
  * Copyright © 2022. CDC® All rights reserved.
  **/
+
 export const useArieCursor = () => {
-  const [value, setValue] = useState<string>('X: 00000, Y: 00000');
+  const [xValue, setXValue] = useState<string>('00000');
+  const [yValue, setYValue] = useState<string>('00000');
 
   useEffect(() => {
     const format = (num: number, pad = 5): string =>
@@ -22,7 +24,8 @@ export const useArieCursor = () => {
     const setFromEvent = (event: MouseEvent): void => {
       const x = format(event.clientX);
       const y = format(event.clientY);
-      setValue(`X: ${x}, Y: ${y}`);
+      setXValue(x);
+      setYValue(y);
     };
 
     window.addEventListener('mousemove', setFromEvent);
@@ -32,7 +35,7 @@ export const useArieCursor = () => {
     };
   }, []);
 
-  return value;
+  return { xValue, yValue };
 };
 
 /**
@@ -45,17 +48,23 @@ export const useArieCursor = () => {
  * A string containing the cursor's position and the dot's size.
  *
  * @example
- * import { useCursorValue } from 'arie-js';
- *
- * const Component = () => {
- *   const cursorValue = useCursorValue();
- *
- *  // ...
- *
- * return (
- *  <div>
- *   <p>{cursorValue}</p>
- * </div>
- * )
- * }
  */
+
+/*
+import React from 'react';
+import { useArieCursor } from './useArieCursor';
+
+const App = () => {
+  const { xValue, yValue } = useArieCursor();
+
+  return (
+    <div>
+      <p>X: {xValue}</p>
+      <p>Y: {yValue}</p>
+    </div>
+  );
+};
+
+export default App;
+
+*/

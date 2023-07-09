@@ -5,15 +5,13 @@ import React from 'react';
 
 import { useArieCursor } from 'arie-js';
 
-export const CursorArie = () => {
-  const cursorValue = useArieCursor();
+export const CurserArie = () => {
+  const { xValue, yValue } = useArieCursor();
 
   return (
-    <>
-      <p>
-        <span style={{ color: 'red' }}>Cursor Value: </span>
-        <span style={{ color: 'blue' }}>{cursorValue}</span>
-      </p>
-    </>
+    <div>
+      <p>X: {xValue}</p>
+      <p>Y: {yValue}</p>
+    </div>
   );
 };
