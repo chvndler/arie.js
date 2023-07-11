@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { ScrollProps } from '../types';
+import { type ScrollProps } from '../types';
 
 /**
  * @description
@@ -18,7 +18,7 @@ const frac = ({ window, document }: ScrollProps): number => {
   return Math.min(window.scrollY / (document.body.offsetHeight - 770), 0.999);
 };
 
-export const useArieScroll = (): string => {
+const useArieScroll = (): string => {
   const [value, setValue] = useState<string>('0000');
 
   useEffect(() => {
@@ -39,6 +39,8 @@ export const useArieScroll = (): string => {
 
   return value;
 };
+
+export default useArieScroll;
 
 /**
  *

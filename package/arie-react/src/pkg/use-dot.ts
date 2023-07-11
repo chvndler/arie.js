@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import type { CursorDot, CursorDotPosition } from '../types';
+import { type CursorDot, type CursorDotPosition } from '../types';
 
-export const useArieDot = ({
+const useArieDot = ({
   dotSize = 10,
 }: CursorDot): [CursorDotPosition, number] => {
   const [cursorPosition, setCursorPosition] = useState<CursorDotPosition>({
@@ -25,6 +25,8 @@ export const useArieDot = ({
   return [cursorPosition, dotSize];
 };
 
+export default useArieDot;
+
 /**
  *
  * @description
@@ -36,30 +38,27 @@ export const useArieDot = ({
  * An array containing the cursor's position and the dot's size.
  *
  *
+ */
+
+/**
+ *
  * @example
- * import { useCursorDot } from 'arie-js';
  *
- * const Component = () => {
- *    useCursorDot({ dotSize: 10 });
+ * import React from 'react';
+ * import useArieDot from './useArieDot';
  *
- *   // ...
+ * const App = () => {
+ *  const [cursorPosition, dotSize] = useArieDot({ dotSize: 10 });
  *
- *  return (
- *   <div>
- *    <div
- *      className="dot"
- *     style={{
- *      position: 'absolute',
- *      top: cursorPosition.y,
- *      left: cursorPosition.x,
- *      width: dotSize,
- *      height: dotSize,
- *      borderRadius: '50%',
- *      backgroundColor: 'black',
- *      zIndex: 9999
- *    }}
- *  />
- *  </div>
- * )
- * }
+ * return (
+ * <div>
+ * <p>X: {cursorPosition.x}</p>
+ * <p>Y: {cursorPosition.y}</p>
+ * <p>Dot Size: {dotSize}</p>
+ * </div>
+ * );
+ * };
+ *
+ * export default App;
+ *
  */

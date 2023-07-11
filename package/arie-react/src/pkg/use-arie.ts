@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Cursor, EventType } from '../types';
+import { type Cursor, type EventType } from '../types';
 
 const initArie: Cursor = {
   position: {
@@ -28,7 +28,7 @@ const initArie: Cursor = {
   },
 };
 
-export const useArie = (
+const useArie = (
   touchEnabled: boolean = true,
   selectedElementId: string | null = null,
   selectedElementOffset: { x: number; y: number } = { x: 0, y: 0 }
@@ -173,3 +173,32 @@ export const useArie = (
 
   return cursor;
 };
+
+export default useArie;
+
+/**
+ *
+ * @example
+ *
+ * import React from 'react';
+ * import useArie from 'use-arie';
+ *
+ * const App = () => {
+ *  const cursor = useArie();
+ *
+ * return (
+ * <div>
+ * <p>Client: {cursor.position.client.x}, {cursor.position.client.y}</p>
+ * <p>Screen: {cursor.position.screen.x}, {cursor.position.screen.y}</p>
+ * <p>Page: {cursor.position.page.x}, {cursor.position.page.y}</p>
+ * <p>Wheel down: {cursor.scroll.wheelDown ? 'true' : 'false'}</p>
+ * <p>Wheel up: {cursor.scroll.wheelUp ? 'true' : 'false'}</p>
+ * <p>Event type: {cursor.eventType}</p>
+ * </div>
+ * );
+ * };
+ *
+ * export default App;
+ *
+ *
+ */

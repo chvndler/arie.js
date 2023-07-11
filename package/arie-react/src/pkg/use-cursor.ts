@@ -13,7 +13,7 @@ import { useState, useEffect } from 'react';
  * Copyright © 2022. CDC® All rights reserved.
  **/
 
-export const useArieCursor = () => {
+const useArieCursor = () => {
   const [xValue, setXValue] = useState<string>('00000');
   const [yValue, setYValue] = useState<string>('00000');
 
@@ -37,6 +37,8 @@ export const useArieCursor = () => {
 
   return { xValue, yValue };
 };
+
+export default useArieCursor;
 
 /**
  * @description
