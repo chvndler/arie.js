@@ -12,7 +12,7 @@
   "dependencies": {
     "@atlrdsgn/kit": "^0.3.0",
     "arie-js": "*",
-    "clsx": "^1.2.1",
+    "clsx": "^2.0.0",
     "inter-ui": "^3.19.3",
     "next": "^13.4.4",
     "next-themes": "^0.2.1",
