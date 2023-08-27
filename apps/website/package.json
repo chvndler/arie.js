@@ -10,7 +10,7 @@
     "clean": "rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
-    "@atlrdsgn/kit": "^0.3.0",
+    "@atlrdsgn/kit": "^0.5.0",
     "arie-js": "*",
     "clsx": "^1.2.1",
     "inter-ui": "^3.19.3",
