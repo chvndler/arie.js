@@ -38,7 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "@vitejs/plugin-react": "^4.0.2",
-    "dts-bundle-generator": "^8.0.1",
+    "dts-bundle-generator": "^9.0.0",
     "eslint": "^8.44.0",
     "prettier": "^3.0.0",
     "react": "^18.2.0",
