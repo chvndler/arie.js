@@ -94,8 +94,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2(vite@4.4.1)
       dts-bundle-generator:
-        specifier: ^8.0.1
-        version: 8.0.1
+        specifier: ^9.0.0
+        version: 9.0.0
       eslint:
         specifier: ^8.44.0
         version: 8.44.0
@@ -2874,12 +2874,12 @@ packages:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
 
-  /dts-bundle-generator@8.0.1:
-    resolution: {integrity: sha512-9JVw78/OXdKfq+RUrmpLm6WAUJp+aOUGEHimVqIlOEH2VugRt1I8CVIoQZlirWZko+/SVZkNgpWCyZubUuzzPA==}
+  /dts-bundle-generator@9.0.0:
+    resolution: {integrity: sha512-4XPDOb+F1fkPrvqFL4hnNW2Edc3uiFxQDsK8gUMP8/45+QkA+dSOH0ZWZCKXEjA3ITVbPGV1li8oP8JE4Z/Y0g==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
-      typescript: 5.1.3
+      typescript: 5.1.6
       yargs: 17.7.2
     dev: true
 
