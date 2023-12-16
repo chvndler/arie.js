@@ -13,7 +13,7 @@
     "@atlrdsgn/kit": "^0.3.0",
     "arie-js": "*",
     "clsx": "^1.2.1",
-    "inter-ui": "^3.19.3",
+    "inter-ui": "^4.0.0",
     "next": "^13.4.4",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
