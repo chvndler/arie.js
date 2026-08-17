@@ -15,7 +15,6 @@
       "DOM"
     ],
     "types": [
-      "vite/client",
       "node"
     ],
     "importHelpers": true,
