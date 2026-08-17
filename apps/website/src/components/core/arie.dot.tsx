@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useArieDot } from 'arie-js';
 
 export const DotArie = () => {

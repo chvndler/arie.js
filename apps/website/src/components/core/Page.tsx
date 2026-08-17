@@ -1,7 +1,3 @@
-
-
-import React from 'react';
-
 import type { PageProps } from '@/ts/page';
 
 export const PageLayout = ({ children, type = 'Production' }: PageProps) => {

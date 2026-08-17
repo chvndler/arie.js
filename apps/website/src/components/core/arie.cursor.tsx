@@ -1,9 +1,5 @@
-
-
 'use client';
-import React from 'react';
-
-import useArie from 'arie-js';
+import { ArieCursorPosition, useArie } from 'arie-js';
 
 export const CursorArie = () => {
   const {
@@ -11,6 +7,9 @@ export const CursorArie = () => {
   } = useArie();
   return (
     <div>
+      <p>
+        Cursor: {client.x ?? 0}, {client.y ?? 0}
+      </p>
       <ArieCursorPosition />
     </div>
   );
