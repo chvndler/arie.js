@@ -40,6 +40,9 @@ export default defineConfig({
       // name: 'arie',
       // fileName: format => fileName[format],
     },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+    },
   },
   plugins: [react()],
 });

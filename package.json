@@ -1,6 +1,7 @@
 {
   "name": "arie-js-root",
   "private": true,
+  "packageManager": "pnpm@10.33.3",
   "scripts": {
     "build": "turbo run build",
     "build:kit": "turbo run build --filter=kit",
@@ -17,7 +18,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.0",
-    "eslint": "^10.8.1",
+    "eslint": "^8.57.1",
     "eslint-config-atlrdsgn": "^0.0.4",
     "prettier": "^3.9.6",
     "turbo": "^2.10.10"
@@ -26,5 +27,11 @@
     "node_modules",
     "dist",
     "build"
-  ]
+  ],
+  "pnpm": {
+    "overrides": {
+      "esbuild": "^0.25.12",
+      "vite": "^6.4.3"
+    }
+  }
 }

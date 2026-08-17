@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { useArie } from 'arie-js';
 
 export const TrackArie = () => {

@@ -3,7 +3,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
@@ -44,11 +45,11 @@
     /**
      * use Node's module resolution algorithm, instead of the legacy TS one
      */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     /**
      * transpile to React.createElement
      */
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
@@ -95,6 +96,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "incremental": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "target": "ES2017"
   }
 }

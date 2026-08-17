@@ -1,8 +1,4 @@
-
-
 'use client';
-import React from 'react';
-
 import { useArieScroll } from 'arie-js';
 
 export const ScrollArie = () => {

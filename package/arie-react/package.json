@@ -9,11 +9,13 @@
     "url": "git+https://github.com/chvndler/arie.js.git"
   },
   "main": "./dist/arie.mjs",
-  "module": "./dist/arie.js",
+  "module": "./dist/arie.mjs",
   "exports": {
     ".": {
+      "types": "./dist/arie-js.d.ts",
       "require": "./dist/arie.mjs",
-      "import": "./dist/arie.umd.js"
+      "import": "./dist/arie.mjs",
+      "default": "./dist/arie.mjs"
     }
   },
   "typings": "./dist/arie-js.d.ts",
@@ -37,16 +39,15 @@
     "@types/react": "^19.2.18",
     "@typescript-eslint/eslint-plugin": "^8.67.0",
     "@typescript-eslint/parser": "^8.67.0",
-    "@vitejs/plugin-react": "^6.0.5",
-    "dts-bundle-generator": "^9.5.1",
-    "eslint": "^10.8.1",
+    "@vitejs/plugin-react": "^5.2.0",
+    "dts-bundle-generator": "^8.1.2",
+    "eslint": "^8.57.1",
     "prettier": "^3.9.6",
     "react": "^19.2.8",
     "tslib": "^2.8.1",
     "turbo": "^2.10.10",
-    "typescript": "^7.0.2",
-    "vite": "^8.2.1",
-    "vite-plugin-dts": "^5.0.3",
-    "vitest": "^4.1.10"
+    "typescript": "^5.9.3",
+    "vite": "^6.4.3",
+    "vitest": "^3.2.7"
   }
 }
